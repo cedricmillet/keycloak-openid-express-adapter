@@ -1,7 +1,6 @@
 // ========================================================
 //  IMPORTS
 // ========================================================
-const express = require('express');
 const expressSession = require('express-session');
 const passport = require('passport');
 const { Issuer, Strategy } = require('openid-client');
@@ -110,7 +109,7 @@ OpenIdExpressAdapter.prototype.checkAuthenticated = () => {
             return next();
         }
         return res.status(403).json({message: "Vous devez vous identifier. Utilisez la route /login"})
-        // res.redirect("/test")
+        // Sinon redirection directe ? res.redirect("/login")
     };
 }
 

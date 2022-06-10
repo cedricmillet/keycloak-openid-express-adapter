@@ -10,7 +10,7 @@ const express = require('express');
     //===============================================
     //  IMPORT LIB CUSTOM & APPLICATION MIDDLEWARE
     //===============================================
-    const adapter = require('./OpenIdExpressAdapter');
+    const adapter = require('../OpenIdExpressAdapter');
     const openIdAdapter = new adapter({
         realm: 'keycloak-express',
         client_id: 'keycloak-express',
